@@ -1,0 +1,121 @@
+﻿# ============================================================================
+# Git ignore rules for CvGameCoreSource (Windows, Visual Studio C++ projects)
+# ----------------------------------------------------------------------------
+# This file ignores:
+# - Visual Studio user-specific and workspace files
+# - Intermediate and output build artifacts
+# - JetBrains Rider/.idea metadata (optional)
+# - Local caches and logs
+#
+# It avoids blanket patterns that could hide tracked third‑party libs shipped in
+# this repository. Library/executable patterns are scoped to build folders only.
+# ============================================================================
+
+# --- IDE/workspace metadata -------------------------------------------------
+.vs/
+.vscode/
+.idea/
+*.iml
+
+# Visual Studio user files
+*.suo
+*.user
+*.userosscache
+*.userprefs
+*.sln.docstates
+
+# VS database/caches
+*.VC.db
+*.VC.VC.opendb
+*.sdf
+*.opensdf
+*.ipch
+ipch/
+
+# JetBrains caches
+.fleet/
+
+# --- Build output & intermediates ------------------------------------------
+# Common output and intermediate directories
+[Bb]uild/
+BuildOutput/
+BuildTemp/
+bin/
+obj/
+out/
+Debug/
+Debug*/
+Release/
+Release*/
+x64/
+x86/
+Win32/
+
+# MSBuild / CL / Linker intermediates
+*.obj
+*.iobj
+*.pch
+*.ipch
+*.pdb
+*.idb
+*.ilk
+*.tmp
+*.tlog
+*.lastcodeanalysissucceeded
+*.log
+*.cache
+*.cachefile
+*.rsp
+*.manifest
+*.metaproj
+*.metaproj.tmp
+*.unsuccessfulbuild
+
+# Resource compiler intermediates
+*.aps
+*.res
+
+# Precompiled headers
+*.gch
+
+# Static analysis / profiling
+*.sbr
+*.bsc
+*.pgc
+*.pgd
+*.vsp
+*.vspscc
+
+# Coverage
+*.gcno
+*.gcda
+*.gcov
+
+# Linker/export files — scoped to build folders only to avoid hiding checked-in libs
+BuildOutput/**/*.lib
+BuildOutput/**/*.exp
+BuildOutput/**/*.dll
+BuildOutput/**/*.exe
+BuildOutput/**/*.map
+BuildTemp/**/*.lib
+BuildTemp/**/*.exp
+BuildTemp/**/*.dll
+BuildTemp/**/*.exe
+BuildTemp/**/*.map
+
+# Lua compiled bytecode (if ever generated locally)
+**/*.luac
+
+# --- OS/filesystem noise ----------------------------------------------------
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.DS_Store
+
+# --- Tooling outputs --------------------------------------------------------
+*.opendb
+*.tlog
+*.gcov.json
+
+# --- Local scripts/config (optional patterns, uncomment if needed) ----------
+# tools/local/**
