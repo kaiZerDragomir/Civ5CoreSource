@@ -158,10 +158,13 @@ FDataStream & operator<<(FDataStream & saveTo, const std::map<KeyType, ElementTy
 	return saveTo;
 }
 
+// CVU-2 {
 template<typename KeyType, typename ElementType>
-FDataStream & operator<<(FDataStream & saveTo, const stdext::hash_map<KeyType, ElementType> & readFrom)
+FDataStream & operator<<(FDataStream & saveTo, const std::unordered_map<KeyType, ElementType> & readFrom)
 {
-	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<std::pair<KeyType, ElementType>, const stdext::hash_map<KeyType, ElementType> >(saveTo, readFrom));
+	std::for_each(readFrom.begin(), readFrom.end(), SerializeFromAssociativeContainer<std::pair<KeyType, ElementType>, 
+		const std::unordered_map<KeyType, ElementType> >(saveTo, readFrom));
+	// CVU-2 }
 	return saveTo;
 }
 
@@ -239,10 +242,12 @@ FDataStream & operator>>(FDataStream & loadFrom, std::map<KeyType, ElementType> 
 	return loadFrom;
 }
 
+// CVU-2 {
 template<typename KeyType, typename ElementType>
-FDataStream & operator>>(FDataStream & loadFrom, stdext::hash_map<KeyType, ElementType> & writeTo)
+FDataStream & operator>>(FDataStream & loadFrom, std::unordered_map<KeyType, ElementType> & writeTo)
 {
-	SerializeToAssociativeContainer<std::pair<KeyType, ElementType>, stdext::hash_map<KeyType, ElementType> >(loadFrom, writeTo);
+	SerializeToAssociativeContainer<std::pair<KeyType, ElementType>, std::unordered_map<KeyType, ElementType> >(loadFrom, writeTo);
+	// CVU-2 }
 	return loadFrom;
 }
 

@@ -142,7 +142,8 @@ class CvGlobals
 {
 public:
 
-	typedef stdext::hash_map<std::string /* type string */, int /* info index */> InfosMap;
+	// CVU-2
+	typedef std::unordered_map<std::string /* type string */, int /* info index */> InfosMap;
 	typedef std::map<uint /* FString::HashType */, int /* info index */> InfosHashMap;
 
 	// singleton accessor

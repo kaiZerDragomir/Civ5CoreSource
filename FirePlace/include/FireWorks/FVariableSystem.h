@@ -16,6 +16,9 @@
 
 #include "FString.h"
 
+// CVU-2
+#include <unordered_map>
+
 //! Represents the different types of data an FVariable can represent.
 enum eVariableType
 {
@@ -46,7 +49,8 @@ class FVariableDebug;
 #define FVARTYPE FVariableDebug
 #endif	//	FINAL_RELEASE
 
-typedef STDEXT::hash_map< FString, FVARTYPE*, FStringHashTraits > FVariableHash;
+// CVU-2
+typedef std::unordered_map< FString, FVARTYPE*, FStringHashTraits > FVariableHash;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // CLASS:	FVariableCallback

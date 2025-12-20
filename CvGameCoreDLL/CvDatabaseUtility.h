@@ -100,7 +100,8 @@ public:
 	const char* GetErrorMessage() const;
 
 private:
-	typedef stdext::hash_map<std::string, Database::Results*> ResultsMap;
+	// CVU-2
+	typedef std::unordered_map<std::string, Database::Results*> ResultsMap;
 	ResultsMap m_storedResults;
 };
 

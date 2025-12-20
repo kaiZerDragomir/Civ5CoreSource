@@ -21,6 +21,9 @@
 #include "FArray.h"
 #include "FEndian.h"
 
+#include <string>
+#include <exception>
+
 class YouMustImplementASerializeOperatorForThisTypeError;
 class FStringA;
 class FStringW;

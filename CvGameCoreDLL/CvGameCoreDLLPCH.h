@@ -53,7 +53,7 @@
 #include <tchar.h>
 #include <assert.h>
 #include <map>
-#include <hash_map>
+// CVU-2 #include <hash_map>
 #include <limits>
 #include <unordered_set>
 
