@@ -348,6 +348,7 @@
     <ClCompile Include="CvDllWorldInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="banned.h" />
     <ClInclude Include="CvAchievementUnlocker.h" />
     <ClInclude Include="CvAdvisorCounsel.h" />
     <ClInclude Include="CvAdvisorRecommender.h" />
@@ -357,6 +358,7 @@
     <ClInclude Include="CvAStar.h" />
     <ClInclude Include="CvAStarNode.h" />
     <ClInclude Include="CvBarbarians.h" />
+    <ClInclude Include="CvBitfield.h" />
     <ClInclude Include="CvBuilderTaskingAI.h" />
     <ClInclude Include="CvBuildingClasses.h" />
     <ClInclude Include="CvBuildingProductionAI.h" />
@@ -374,7 +376,60 @@
     <ClInclude Include="CvDiplomacyAI.h" />
     <ClInclude Include="CvDiplomacyAIEnums.h" />
     <ClInclude Include="CvDiplomacyRequests.h" />
+    <ClInclude Include="CvDllBuildInfo.h" />
+    <ClInclude Include="CvDllBuildingInfo.h" />
+    <ClInclude Include="CvDllCity.h" />
+    <ClInclude Include="CvDllCivilizationInfo.h" />
+    <ClInclude Include="CvDllColorInfo.h" />
+    <ClInclude Include="CvDllCombatInfo.h" />
+    <ClInclude Include="CvDllContext.h" />
+    <ClInclude Include="CvDllDatabaseUtility.h" />
+    <ClInclude Include="CvDllDeal.h" />
+    <ClInclude Include="CvDllDealAI.h" />
+    <ClInclude Include="CvDllDiplomacyAI.h" />
+    <ClInclude Include="CvDllDlcPackageInfo.h" />
+    <ClInclude Include="CvDllEraInfo.h" />
+    <ClInclude Include="CvDLLFAStarIFaceBase.h" />
+    <ClInclude Include="CvDllFeatureInfo.h" />
+    <ClInclude Include="CvDllGame.h" />
+    <ClInclude Include="CvDllGameAsynch.h" />
+    <ClInclude Include="CvDllGameDeals.h" />
+    <ClInclude Include="CvDllGameOptionInfo.h" />
+    <ClInclude Include="CvDllGameSpeedInfo.h" />
+    <ClInclude Include="CvDllHandicapInfo.h" />
+    <ClInclude Include="CvDllImprovementInfo.h" />
     <ClInclude Include="CvDLLInterfaceIFaceBase.h" />
+    <ClInclude Include="CvDllInterfaceModeInfo.h" />
+    <ClInclude Include="CvDllLeaderheadInfo.h" />
+    <ClInclude Include="CvDllMap.h" />
+    <ClInclude Include="CvDllMinorCivInfo.h" />
+    <ClInclude Include="CvDllMissionData.h" />
+    <ClInclude Include="CvDllMissionInfo.h" />
+    <ClInclude Include="CvDllNetInitInfo.h" />
+    <ClInclude Include="CvDllNetLoadGameInfo.h" />
+    <ClInclude Include="CvDllNetMessageHandler.h" />
+    <ClInclude Include="CvDllNetworkSyncronization.h" />
+    <ClInclude Include="CvDllPathFinderUpdate.h" />
+    <ClInclude Include="CvDllPlayer.h" />
+    <ClInclude Include="CvDllPlayerColorInfo.h" />
+    <ClInclude Include="CvDllPlayerOptionInfo.h" />
+    <ClInclude Include="CvDllPlot.h" />
+    <ClInclude Include="CvDllPolicyInfo.h" />
+    <ClInclude Include="CvDllPreGame.h" />
+    <ClInclude Include="CvDllPromotionInfo.h" />
+    <ClInclude Include="CvDllRandom.h" />
+    <ClInclude Include="CvDllResourceInfo.h" />
+    <ClInclude Include="CvDllScriptSystemUtility.h" />
+    <ClInclude Include="CvDllTeam.h" />
+    <ClInclude Include="CvDllTechInfo.h" />
+    <ClInclude Include="CvDllTerrainInfo.h" />
+    <ClInclude Include="CvDllUnit.h" />
+    <ClInclude Include="CvDllUnitCombatClassInfo.h" />
+    <ClInclude Include="CvDllUnitInfo.h" />
+    <ClInclude Include="CvDllVersion.h" />
+    <ClInclude Include="CvDllVictoryInfo.h" />
+    <ClInclude Include="CvDllWorldBuilderMapLoader.h" />
+    <ClInclude Include="CvDllWorldInfo.h" />
     <ClInclude Include="CvEconomicAI.h" />
     <ClInclude Include="CvEmphasisClasses.h" />
     <ClInclude Include="CvFlavorManager.h" />
@@ -382,6 +437,7 @@
     <ClInclude Include="CvGame.h" />
     <ClInclude Include="CvGameCoreDLL.h" />
     <ClInclude Include="CvGameCoreDLLPCH.h" />
+    <ClInclude Include="CvGameCoreEnums.h" />
     <ClInclude Include="CvGameCoreEnumSerialization.h" />
     <ClInclude Include="CvGameCoreUtils.h" />
     <ClInclude Include="CvGameQueries.h" />
@@ -404,6 +460,7 @@
     <ClInclude Include="CvPlayerAI.h" />
     <ClInclude Include="CvPlayerManager.h" />
     <ClInclude Include="CvPlot.h" />
+    <ClInclude Include="CvPoint.h" />
     <ClInclude Include="CvPolicyAI.h" />
     <ClInclude Include="CvPolicyClasses.h" />
     <ClInclude Include="CvPopupInfoSerialization.h" />
@@ -460,6 +517,15 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CvGameCoreDLL.def" />
+    <Content Include="CvGameCoreDLL.vcproj" />
+    <Content Include="CvGameCoreDLL.vs2010.vcxproj" />
+    <Content Include="CvGameCoreDLL.vs2010.vcxproj.filters" />
+    <Content Include="CvGameCoreDLL.vs2010.vcxproj.user" />
+    <Content Include="CvGameCoreDLL.vs2012.vcxproj" />
+    <Content Include="CvGameCoreDLL.vs2013.vcxproj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

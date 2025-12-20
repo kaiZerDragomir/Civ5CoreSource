@@ -346,6 +346,7 @@
     <ClCompile Include="CvDllWorldInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="banned.h" />
     <ClInclude Include="CvAchievementUnlocker.h" />
     <ClInclude Include="CvAdvisorCounsel.h" />
     <ClInclude Include="CvAdvisorRecommender.h" />
@@ -356,6 +357,7 @@
     <ClInclude Include="CvAStarNode.h" />
     <ClInclude Include="CvBarbarians.h" />
     <ClInclude Include="CvBeliefClasses.h" />
+    <ClInclude Include="CvBitfield.h" />
     <ClInclude Include="CvBuilderTaskingAI.h" />
     <ClInclude Include="CvBuildingClasses.h" />
     <ClInclude Include="CvBuildingProductionAI.h" />
@@ -373,7 +375,9 @@
     <ClInclude Include="CvDiplomacyAI.h" />
     <ClInclude Include="CvDiplomacyAIEnums.h" />
     <ClInclude Include="CvDiplomacyRequests.h" />
+    <ClInclude Include="CvDLLFAStarIFaceBase.h" />
     <ClInclude Include="CvDLLInterfaceIFaceBase.h" />
+    <ClInclude Include="CvDllVersion.h" />
     <ClInclude Include="CvEconomicAI.h" />
     <ClInclude Include="CvEmphasisClasses.h" />
     <ClInclude Include="CvEspionageClasses.h" />
@@ -382,6 +386,7 @@
     <ClInclude Include="CvGame.h" />
     <ClInclude Include="CvGameCoreDLL.h" />
     <ClInclude Include="CvGameCoreDLLPCH.h" />
+    <ClInclude Include="CvGameCoreEnums.h" />
     <ClInclude Include="CvGameCoreEnumSerialization.h" />
     <ClInclude Include="CvGameCoreUtils.h" />
     <ClInclude Include="CvGameQueries.h" />
@@ -514,6 +519,15 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CvGameCoreDLL.def" />
+    <Content Include="CvGameCoreDLL_Expansion1.vcproj" />
+    <Content Include="CvGameCoreDLL_Expansion1.vs2010.vcxproj" />
+    <Content Include="CvGameCoreDLL_Expansion1.vs2010.vcxproj.filters" />
+    <Content Include="CvGameCoreDLL_Expansion1.vs2010.vcxproj.user" />
+    <Content Include="CvGameCoreDLL_Expansion1.vs2012.vcxproj" />
+    <Content Include="CvGameCoreDLL_Expansion1.vs2013.vcxproj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
