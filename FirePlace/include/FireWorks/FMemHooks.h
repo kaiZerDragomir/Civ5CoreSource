@@ -12,7 +12,8 @@
 //-----------------------------------------------------------------------------
 // Pool Types (tags are pool type specific)
 //-----------------------------------------------------------------------------
-typedef enum eMPoolType
+// CVU-2 typedef
+enum eMPoolType
 {
 	c_eMPoolTypeContainer = 0,	     // container allocations that need to be refactored
 	c_eMPoolTypeSBA,			     // internal small block allocator grabs

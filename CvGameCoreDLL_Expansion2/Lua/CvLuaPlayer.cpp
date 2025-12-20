@@ -6701,7 +6701,7 @@ int CvLuaPlayer::lGetCurrentEra(lua_State* L)
 //int getTeam();
 int CvLuaPlayer::lGetTeam(lua_State* L)
 {
-	return BasicLuaMethod(L, &CvPlayerAI::getTeam);
+	return BasicLuaMethod<TeamTypes>(L, &CvPlayerAI::getTeam);
 }
 //------------------------------------------------------------------------------
 //ColorTypes GetPlayerColor();
